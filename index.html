@@ -660,12 +660,6 @@
   #contact .section-title { color: var(--warm-white); }
   #contact .section-subtitle { color: rgba(255,255,255,0.6); }
 
-  .contact-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-  }
-
   .contact-info p {
     color: rgba(255,255,255,0.7);
     font-size: 0.95rem;
@@ -693,18 +687,6 @@
   }
 
   .contact-detail a:hover { color: var(--gold-light); }
-
-  .calendly-embed {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    min-height: 700px;
-  }
-
-  .calendly-inline-widget {
-    border-radius: 12px;
-  }
 
   /* ===== FOOTER ===== */
   footer {
@@ -791,13 +773,6 @@
       gap: 32px;
     }
 
-    .contact-layout {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-
-    .calendly-embed { min-height: 650px; }
-
     .trust-inner {
       grid-template-columns: 1fr;
       gap: 28px;
@@ -824,7 +799,7 @@
       <li><a href="#services">Services & Fees</a></li>
       <li><a href="#process">How It Works</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="https://calendly.com/freeholdplanning-info/30min" class="nav-cta" target="_blank">Get in Touch</a></li>
+      <li><a href="mailto:info@freeholdplanning.ca" class="nav-cta">Get in Touch</a></li>
     </ul>
     <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'">
       <span></span><span></span><span></span>
@@ -839,7 +814,7 @@
     <h1>Retirement income and tax planning, without the conflicts of interest.</h1>
     <p>We help Canadians turn their savings into reliable, tax-efficient retirement income. No product sales, no commissions, no hidden agendas. Just a plan built around your life.</p>
     <div class="hero-actions">
-      <a href="https://calendly.com/freeholdplanning-info/30min" class="btn-primary" target="_blank">Request a Consultation</a>
+      <a href="mailto:info@freeholdplanning.ca" class="btn-primary">Request a Consultation</a>
       <a href="#services" class="btn-secondary">See Services & Fees</a>
     </div>
   </div>
@@ -1060,18 +1035,6 @@
       <div class="about-sidebar reveal">
         <h4>Our Credentials</h4>
         <div class="credential">
-          <strong>PFP® Designation</strong>
-          Personal Financial Planner, FSRA-approved for Financial Planner title in Ontario
-        </div>
-        <div class="credential">
-          <strong>CSC Qualified</strong>
-          Canadian Securities Course, Canadian Securities Institute
-        </div>
-        <div class="credential">
-          <strong>CFP® In Progress</strong>
-          Certified Financial Planner designation (pursuing)
-        </div>
-        <div class="credential">
           <strong>Home Base</strong>
           Windsor-Essex County, Ontario
         </div>
@@ -1093,36 +1056,29 @@
   <div class="section-inner">
     <div class="section-label reveal">Contact</div>
     <h2 class="section-title reveal">Let's start a conversation.</h2>
-    <p class="section-subtitle reveal">Book a free 20-minute introduction directly below, or email us at info@freeholdplanning.ca. No commitment, no pressure.</p>
+    <p class="section-subtitle reveal">Email us at info@freeholdplanning.ca to start the conversation. No commitment, no pressure.</p>
 
-    <div class="contact-layout">
-      <div class="contact-info reveal">
-        <p>Whether you're approaching retirement, recently retired, or just want a second opinion on your financial plan, we'd be happy to hear from you. The initial conversation is always free.</p>
+    <div class="contact-info reveal">
+      <p>Whether you're approaching retirement, recently retired, or just want a second opinion on your financial plan, we'd be happy to hear from you. The initial conversation is always free.</p>
 
-        <div class="contact-detail">
-          <div class="label">Email</div>
-          <a href="mailto:info@freeholdplanning.ca">info@freeholdplanning.ca</a>
-        </div>
-
-        <div class="contact-detail">
-          <div class="label">In-Person Service Area</div>
-          <span>Windsor, LaSalle, Tecumseh, Lakeshore, Amherstburg, Leamington, Kingsville & all of Essex County.</span>
-        </div>
-
-        <div class="contact-detail">
-          <div class="label">Virtual Across Canada</div>
-          <span>We work with clients in every province through secure video meetings. If you're in Canada, we can help.</span>
-        </div>
-
-        <div class="contact-detail">
-          <div class="label">Meeting Availability</div>
-          <span>Evenings & weekends by appointment. Virtual and in-person options available.</span>
-        </div>
+      <div class="contact-detail">
+        <div class="label">Email</div>
+        <a href="mailto:info@freeholdplanning.ca">info@freeholdplanning.ca</a>
       </div>
 
-      <div class="calendly-embed reveal">
-        <div class="calendly-inline-widget" data-url="https://calendly.com/freeholdplanning-info/30min?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <div class="contact-detail">
+        <div class="label">In-Person Service Area</div>
+        <span>Windsor, LaSalle, Tecumseh, Lakeshore, Amherstburg, Leamington, Kingsville & all of Essex County.</span>
+      </div>
+
+      <div class="contact-detail">
+        <div class="label">Virtual Across Canada</div>
+        <span>We work with clients in every province through secure video meetings. If you're in Canada, we can help.</span>
+      </div>
+
+      <div class="contact-detail">
+        <div class="label">Meeting Availability</div>
+        <span>Evenings & weekends by appointment. Virtual and in-person options available.</span>
       </div>
     </div>
   </div>
