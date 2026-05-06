@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta -->
+  <title>When Should You Take CPP? The Math Behind 60 vs 65 vs 70 | Freehold Financial Planning</title>
+  <meta name="description" content="Break-even analysis for CPP at 60, 65, or 70. See how timing affects your retirement income. Fee-only financial planning for Windsor-Essex retirees.">
+  <meta name="keywords" content="when to take CPP, CPP at 60 vs 65 vs 70, retirement planning Windsor, CPP break-even, Canada Pension Plan timing, financial planner Windsor-Essex">
+  <meta name="author" content="Spencer - Freehold Financial Planning">
+  <link rel="canonical" href="https://freeholdplanning.ca/blog/when-to-take-cpp/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="When Should You Take CPP? The Math Behind 60 vs 65 vs 70">
+  <meta property="og:description" content="Break-even analysis for CPP at 60, 65, or 70. See how timing affects your retirement income. Fee-only financial planning for Windsor-Essex retirees.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://freeholdplanning.ca/blog/when-to-take-cpp/">
+  <meta property="og:site_name" content="Freehold Financial Planning">
+  <meta property="og:locale" content="en_CA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="When Should You Take CPP? The Math Behind 60 vs 65 vs 70">
+  <meta name="twitter:description" content="Break-even analysis for CPP at 60, 65, or 70. See how timing affects your retirement income.">
+
+  <!-- Schema.org Article Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "When Should You Take CPP? The Math Behind 60 vs 65 vs 70",
+    "description": "Break-even analysis for CPP at 60, 65, or 70. See how timing affects your retirement income.",
+    "author": {
+      "@type": "Person",
+      "name": "Spencer",
+      "jobTitle": "Financial Planner",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freehold Financial Planning"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Freehold Financial Planning",
+      "url": "https://freeholdplanning.ca"
+    },
+    "datePublished": "2026-03-29",
+    "dateModified": "2026-03-29",
+    "mainEntityOfPage": "https://freeholdplanning.ca/blog/when-to-take-cpp/",
+    "keywords": ["CPP", "Canada Pension Plan", "retirement planning", "Windsor-Essex", "CPP timing"]
+  }
+  </script>
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "name": "Freehold Financial Planning",
+    "url": "https://freeholdplanning.ca",
+    "areaServed": [
+      { "@type": "City", "name": "Windsor", "containedInPlace": { "@type": "Province", "name": "Ontario" } },
+      { "@type": "Region", "name": "Essex County" }
+    ],
+    "serviceType": "Fee-Only Financial Planning",
+    "description": "Advice-only, fee-for-service financial planning specializing in retirement income and tax planning for Windsor-Essex."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #1B3A5C;
+      --navy-deep: #12283F;
+      --teal: #2A7F62;
+      --teal-light: #E8F5EE;
+      --teal-muted: #3A9E7C;
+      --sand: #F7F4EF;
+      --sand-dark: #EDE8DF;
+      --text: #2D2D2D;
+      --text-light: #5A5A5A;
+      --white: #FFFFFF;
+      --border: #D6D0C5;
+      --accent-gold: #C49A3C;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Sans 3', -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--sand);
+      line-height: 1.7;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Navigation ── */
+    .site-nav {
+      background: var(--navy-deep);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-nav .logo {
+      font-family: 'DM Serif Display', serif;
+      color: var(--white);
+      font-size: 1.35rem;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .site-nav .logo span { color: var(--teal-muted); }
+    .site-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    .site-nav a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .site-nav a:hover { color: var(--white); }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(145deg, var(--navy-deep) 0%, var(--navy) 100%);
+      padding: 4.5rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -15%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(42,127,98,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-label {
+      display: inline-block;
+      background: rgba(42,127,98,0.2);
+      color: var(--teal-muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      color: var(--white);
+      font-size: clamp(2rem, 5vw, 2.85rem);
+      line-height: 1.2;
+      max-width: 700px;
+      margin: 0 auto 1rem;
+      letter-spacing: -0.01em;
+    }
+    .hero-meta {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.88rem;
+    }
+    .hero-meta strong { color: rgba(255,255,255,0.8); font-weight: 600; }
+
+    /* ── Article Layout ── */
+    .article-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .article-wrap h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.65rem;
+      color: var(--navy);
+      margin: 2.8rem 0 1rem;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+
+    .article-wrap p {
+      margin-bottom: 1.35rem;
+      color: var(--text);
+    }
+
+    .article-wrap strong { color: var(--navy); font-weight: 600; }
+
+    /* ── Highlight Box ── */
+    .callout {
+      background: var(--teal-light);
+      border-left: 4px solid var(--teal);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .callout p { margin-bottom: 0.5rem; color: var(--text); }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout strong { color: var(--teal); }
+
+    /* ── Comparison Table ── */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+    }
+    .comparison-table th {
+      background: var(--navy);
+      color: var(--white);
+      text-align: left;
+      padding: 0.85rem 1rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .comparison-table th:first-child { border-radius: 8px 0 0 0; }
+    .comparison-table th:last-child { border-radius: 0 8px 0 0; }
+    .comparison-table td {
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .comparison-table tr:nth-child(even) td { background: rgba(42,127,98,0.04); }
+    .comparison-table tr:last-child td:first-child { border-radius: 0 0 0 8px; }
+    .comparison-table tr:last-child td:last-child { border-radius: 0 0 8px 0; }
+
+    /* ── CTA Section ── */
+    .cta-section {
+      background: linear-gradient(145deg, var(--navy-deep), var(--navy));
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin: 3rem 0 1rem;
+    }
+    .cta-section h2 {
+      font-family: 'DM Serif Display', serif;
+      color: var(--white);
+      font-size: 1.55rem;
+      margin: 0 0 0.75rem;
+    }
+    .cta-section p {
+      color: rgba(255,255,255,0.7);
+      max-width: 500px;
+      margin: 0 auto 1.5rem;
+      font-size: 0.95rem;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.85rem 2.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .cta-btn:hover { background: var(--teal-muted); transform: translateY(-1px); }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: var(--navy-deep);
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.82rem;
+    }
+    .site-footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .site-footer a:hover { color: var(--white); }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .site-nav { flex-direction: column; gap: 0.75rem; }
+      .site-nav ul { gap: 1.25rem; }
+      .hero { padding: 3rem 1.25rem 2.5rem; }
+      .article-wrap { padding: 2rem 1.25rem 3rem; }
+      .cta-section { padding: 2rem 1.25rem; }
+      .comparison-table { font-size: 0.85rem; }
+      .comparison-table th, .comparison-table td { padding: 0.65rem 0.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <a href="/" class="logo">Freehold <span>Financial Planning</span></a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-label">Retirement Planning</div>
+    <h1>When Should You Take CPP? The Math Behind 60 vs 65 vs 70</h1>
+    <div class="hero-meta">By <strong>Spencer</strong> &nbsp;|&nbsp; March 29, 2026 &nbsp;|&nbsp; 6 min read</div>
+  </header>
+
+  <!-- Article -->
+  <article class="article-wrap">
+
+    <p>
+      It is one of the most common questions I hear from clients approaching retirement in Windsor-Essex: "When should I start taking my CPP?" The answer is not the same for everyone - it depends on your health, your other income sources, and how you plan to spend your retirement. But the math behind the decision is surprisingly clear once you break it down.
+    </p>
+
+    <h2>The Three Options at a Glance</h2>
+
+    <p>
+      The Canada Pension Plan lets you start your retirement pension as early as age 60 or as late as age 70. Age 65 is considered the "standard" start date, and it is the baseline the government uses to calculate adjustments in either direction.
+    </p>
+
+    <p>
+      If you start before 65, your monthly payment is permanently reduced by 0.6% for every month you take it early - that is 7.2% per year, up to a maximum 36% reduction at age 60. If you delay past 65, your payment increases by 0.7% per month - that is 8.4% per year, up to a 42% increase at age 70.
+    </p>
+
+    <p>
+      Here is what that looks like using the 2026 maximum CPP pension of $1,507.65 per month at age 65:
+    </p>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Start Age</th>
+          <th>Adjustment</th>
+          <th>Monthly Amount</th>
+          <th>Annual Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>60</strong></td>
+          <td>-36%</td>
+          <td>$964.90</td>
+          <td>$11,578.80</td>
+        </tr>
+        <tr>
+          <td><strong>65</strong></td>
+          <td>Baseline</td>
+          <td>$1,507.65</td>
+          <td>$18,091.80</td>
+        </tr>
+        <tr>
+          <td><strong>70</strong></td>
+          <td>+42%</td>
+          <td>$2,140.86</td>
+          <td>$25,690.32</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Keep in mind that the average CPP payment for new recipients at 65 is closer to $800 per month - most people do not receive the maximum. Your actual amount depends on your contribution history. You can check your personal estimate through your My Service Canada Account.
+    </p>
+
+    <h2>The Break-Even Analysis</h2>
+
+    <p>
+      The break-even question is simple: if you start CPP early, you collect smaller cheques for more years. If you delay, you collect nothing for a while but get larger cheques for life. At what age does the person who waited come out ahead?
+    </p>
+
+    <p>
+      <strong>Starting at 60 vs 65:</strong> If you take CPP at 60, you get five extra years of payments. But those payments are 36% smaller. By around age 74, the person who waited until 65 has received more total CPP income - and the gap only grows from there.
+    </p>
+
+    <p>
+      <strong>Starting at 65 vs 70:</strong> Deferring from 65 to 70 means five years of no CPP income but a 42% larger payment for life. The break-even point here lands around age 82. If you live past 82, waiting until 70 was the better financial decision.
+    </p>
+
+    <div class="callout">
+      <p><strong>The key insight:</strong> The average life expectancy for a 65-year-old Canadian is roughly 86 for men and 89 for women. If you are in reasonable health, the odds favour deferral - you are statistically likely to live past the break-even point.</p>
+    </div>
+
+    <p>
+      And remember, CPP is indexed to inflation. A larger base payment means larger annual increases in dollar terms. The longer you live, the more that compounding gap works in your favour.
+    </p>
+
+    <h2>When Taking CPP Early Actually Makes Sense</h2>
+
+    <p>
+      The math favours deferral for most people, but there are real situations where starting at 60 is the right call:
+    </p>
+
+    <p>
+      <strong>You have a serious health condition</strong> that reduces your life expectancy. If you are unlikely to reach the break-even age of 74, taking CPP early puts more money in your hands when you can use it.
+    </p>
+
+    <p>
+      <strong>You need the cash flow.</strong> If you have stopped working and have no other income to bridge the gap, CPP at 60 keeps the lights on. Going into debt or liquidating investments at a loss to "wait for a bigger cheque" is not a winning strategy.
+    </p>
+
+    <p>
+      <strong>You have a spouse with strong survivor benefits.</strong> If your spouse already has a high CPP entitlement and you want to maximize household income in your early retirement years, starting earlier on the lower-earning spouse's benefit can make sense.
+    </p>
+
+    <h2>How CPP Interacts With Your Other Income</h2>
+
+    <p>
+      This is where the decision gets more nuanced - and where most online calculators fall short. CPP does not exist in a vacuum. It interacts with your RRSP, TFSA, OAS, and any other taxable income you have.
+    </p>
+
+    <p>
+      <strong>The RRSP meltdown window:</strong> If you retire at 60 and defer CPP, you have a five-to-ten year window where your taxable income may be very low. This is the ideal time to draw down your RRSP at lower tax brackets - converting tax-deferred savings into cash while you are in the lowest bracket of your retirement. By the time CPP and OAS kick in at 65 or 70, your RRSP balance is smaller, your mandatory RRIF withdrawals are lower, and you have reduced the risk of OAS clawback.
+    </p>
+
+    <p>
+      <strong>OAS clawback risk:</strong> In the 2025 tax year, OAS recovery kicks in when your net income exceeds roughly $90,997. If you are already close to that threshold with pension income, RRIF withdrawals, and investment income, adding a large CPP payment on top could push you into clawback territory. Careful timing of CPP can help you stay below that line.
+    </p>
+
+    <p>
+      <strong>Tax bracket management:</strong> A $2,140 monthly CPP payment at age 70 adds over $25,000 to your taxable income. For Windsor-Essex retirees with a company pension or significant RRIF income, that could bump you into a higher marginal rate. The goal is not just to maximize any single income source - it is to minimize the total tax you pay across all sources over your full retirement.
+    </p>
+
+    <h2>What Most People Get Wrong</h2>
+
+    <p>
+      The biggest mistake I see is treating CPP as an isolated decision. People run a break-even calculator, pick an age, and move on. But CPP timing is really a tax planning decision that needs to be coordinated with your RRSP drawdown strategy, your OAS timing, and your overall retirement income plan.
+    </p>
+
+    <p>
+      The second most common mistake is anchoring to the "take it early because you never know what will happen" mindset. That logic feels intuitive, but it is essentially a bet against your own longevity - and for most healthy Canadians, it is a bet you will lose.
+    </p>
+
+    <p>
+      The right answer depends on your full financial picture: your savings, your tax situation, your health, and your goals. A few hundred dollars a month in CPP timing can mean tens of thousands of dollars over a 25-to-30 year retirement.
+    </p>
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <h2>Not Sure When to Take Your CPP?</h2>
+      <p>
+        I help Windsor-Essex retirees build retirement income plans that coordinate CPP, OAS, RRSP drawdowns, and tax strategy into one clear picture. Fee-only. No products to sell.
+      </p>
+      <a href="/#contact" class="cta-btn">Book a Free Intro Call</a>
+    </div>
+
+    <p style="text-align:center; font-size:0.85rem; color:var(--text-light); margin-top:1.5rem;">
+      Freehold Financial Planning is an advice-only, fee-for-service financial planning practice based in Windsor, Ontario, serving clients across Canada. This article is for educational purposes and does not constitute personalized financial advice.
+    </p>
+
+  </article>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Freehold Financial Planning &nbsp;|&nbsp; Windsor, Ontario &nbsp;|&nbsp; <a href="/#contact">Contact</a></p>
+  </footer>
+
+</body>
+</html>
